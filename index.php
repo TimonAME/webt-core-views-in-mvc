@@ -6,7 +6,7 @@ use src\Hotel;
 
 //loop to create a custom amount of hotels in the array hotels
 $hotels = [];
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 1; $i <= 30; $i++) {
     $hotels[] = new Hotel('Hotel ' . $i, 'Hotel ' . $i . ' Beschreibung');
 }
 
