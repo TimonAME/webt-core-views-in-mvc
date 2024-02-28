@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <h1 class="text-center pt-3">Hotels on the Strip</h1>
+    <div class="row mt-4">
+        <f:for each="{hotels}" as="hotel">
+            <div class="col-md-4 my-1">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{hotel.name}</h5>
+                        <p class="card-text">{hotel.beschreibung}</p>
+                        <img src="{hotel.bild}" class="img-fluid" alt="{hotel.name}">
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>

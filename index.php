@@ -46,7 +46,7 @@ echo $template;
  * composer require "twig/twig"
 */
 
-
+/*
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
@@ -58,3 +58,31 @@ try {
     echo $twig->render('hotel_list.twig', ['hotels' => $hotels]);
 } catch (\Twig\Error\LoaderError|\Twig\Error\SyntaxError|\Twig\Error\RuntimeError $e) {
 }
+*/
+
+
+
+
+/*** Fluid ***
+ * composer require "typo3fluid/fluid"
+*/
+
+use TYPO3Fluid\Fluid\View\TemplateView;
+
+// Instantiate the Fluid TemplateView
+$view = new TemplateView();
+
+// Define the template path(s)
+$view->getTemplatePaths()->setTemplatePathAndFilename('templates/base.html');
+
+// Set the path for the partials
+$view->getTemplatePaths()->setPartialRootPaths(['templates/']);
+
+// Assign variables
+$view->assign('hotels', $hotels);
+
+// Render the view
+$output = $view->render();
+
+// Output the rendered view
+echo $output;
