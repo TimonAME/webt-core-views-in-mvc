@@ -58,5 +58,3 @@ try {
     echo $twig->render('hotel_list.twig', ['hotels' => $hotels]);
 } catch (\Twig\Error\LoaderError|\Twig\Error\SyntaxError|\Twig\Error\RuntimeError $e) {
 }
-//hotel in subtemplate
-
