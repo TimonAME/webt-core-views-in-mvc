@@ -14,7 +14,7 @@ $faker = Faker\Factory::create();
 //loop to create a custom amount of hotels in the array hotels
 $hotels = [];
 $j = 1;
-for ($i = 1; $i <= 30; $i++) {
+for ($i = 1; $i <= 8; $i++) {
     $j++;
     if ($j == 6) {
         $j = 1;
@@ -67,13 +67,18 @@ try {
  * composer require "typo3fluid/fluid"
 */
 
+
 use TYPO3Fluid\Fluid\View\TemplateView;
 
 // Instantiate the Fluid TemplateView
 $view = new TemplateView();
 
+$view->getTemplatePaths()->setLayoutRootPaths(['layouts/']);
+
 // Define the template path(s)
 $view->getTemplatePaths()->setTemplatePathAndFilename('templates/base.html');
+//$view->getTemplatePaths()->setTemplatePathAndFilename('templates/base_2.html');
+
 
 // Set the path for the partials
 $view->getTemplatePaths()->setPartialRootPaths(['templates/']);
